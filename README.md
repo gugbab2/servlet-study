@@ -14,9 +14,4 @@ Java 서블릿으로 만든 간단한 To-Do 리스트 애플리케이션입니�
 - **TaskRepository.java**: 할 일 데이터를 저장하고 관리합니다.
 - **TaskServlet.java**: 할 일 목록 조회 및 할 일 생성을 처리합니다.
 - **AuthorizationFilter.java**: 할 일의 소유자만 수정/삭제할 수 있도록 권한을 검증하는 필터입니다.
-
-## 설정 방법
-
-1. 저장소를 클론합니다:
-   ```bash
-   git clone https://github.com/yourusername/todo-servlet.git
+  
