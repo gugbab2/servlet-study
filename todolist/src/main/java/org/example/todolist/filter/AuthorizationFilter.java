@@ -5,7 +5,7 @@ import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.example.todolist.model.Task;
-import org.example.todolist.repository.TaskRepository;
+import org.example.todolist.repository.TaskRepositoryV1;
 
 import java.io.IOException;
 
@@ -13,7 +13,7 @@ import static jakarta.servlet.http.HttpServletResponse.*;
 
 @WebFilter("/tasks/*")
 public class AuthorizationFilter implements Filter {
-    private final TaskRepository taskRepository = new TaskRepository();
+    private final TaskRepositoryV1 taskRepository = new TaskRepositoryV1();
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
