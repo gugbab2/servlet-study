@@ -6,17 +6,17 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.example.todolist.model.Task;
-import org.example.todolist.repository.TaskRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.example.todolist.repository.TaskRepositoryV1;
 
 import java.io.IOException;
 import java.util.List;
 
 import static jakarta.servlet.http.HttpServletResponse.*;
 
-@WebServlet("/tasks")
-public class TaskController extends HttpServlet {
-    private final TaskRepository taskRepository = new TaskRepository();
+@WebServlet("v1/tasks")
+public class TaskControllerV1 extends HttpServlet {
+    private final TaskRepositoryV1 taskRepository = new TaskRepositoryV1();
     private final ObjectMapper objectMapper = new ObjectMapper(); // Jackson ObjectMapper
 
     @Override

@@ -14,12 +14,12 @@ import java.util.List;
 import static java.nio.file.StandardOpenOption.CREATE;
 import static java.nio.file.StandardOpenOption.TRUNCATE_EXISTING;
 
-public class TaskRepository {
+public class TaskRepositoryV1 {
     private static final String FILE_PATH = Paths.get("temp", "tasks.json").toAbsolutePath().toString();
     private final ObjectMapper objectMapper = new ObjectMapper();
     private List<Task> tasks;
 
-    public TaskRepository() {
+    public TaskRepositoryV1() {
         tasks = loadTasksFromFile();
     }
 
